@@ -9,13 +9,18 @@
 body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 #header {
+    position: fixed;
     width: 100%;
     height: 100px;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 #header_wrap {
     width: 90%;
@@ -76,6 +81,7 @@ form {
     height: 100%;
 }
 section {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,6 +255,7 @@ section {
         flex-direction: column;
         padding: 40px 0;
         text-align: center;
+        transition: transform 1.2s ease-in-out; 
     }
 
     .section_text {
@@ -280,6 +287,7 @@ section {
 @media only screen and (max-width: 480px) {
     #header {
         height: 80px;
+        margin-top: -10px;
     }
 
     .header_menu {
@@ -293,7 +301,7 @@ section {
 
     .header_menu ul li a {
         font-weight: bold;
-        font-size: 18px; /* 줄인 글씨 크기 */
+        font-size: 18px;
         color: #4d4c4c;
     }
 
@@ -302,18 +310,13 @@ section {
         padding: 8px 10px;
     }
 
-    .search_btn {
-        padding: 6px 10px;
-        font-size: 14px;
-    }
-
     .section_text h1 {
-        font-size: 60px; /* 줄인 제목 글씨 크기 */
+        font-size: 60px;
         margin-bottom: 30px;
     }
 
     .section_text h3 {
-        font-size: 22px; /* 줄인 부제목 글씨 크기 */
+        font-size: 22px;
         margin-bottom: 20px;
     }
 
@@ -327,11 +330,11 @@ section {
     }
 
     img {
-        width: 100%; /* 이미지가 전체 폭에 맞도록 조정 */
+        width: 100%;
     }
 
     #content {
-        padding: 100px 20px 20px; /* 위쪽 패딩 조정 */
+        padding: 0 20px 20px;
         width: 100%;
     }
 }

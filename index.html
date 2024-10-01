@@ -19,9 +19,9 @@
                     <li><a href="#">중고차 직거래</a></li>
                 </ul>
             </nav>
-            <form onsubmit="SubmitEvent">
-                <input class="search_input" type="text" placeholder="물품이나 동네를 검색해보세요">
-                <input class="search_btn" type="button" value="채팅하기">
+            <form class="search-form">
+                <input class="search_input" type="text" placeholder="물품이나 동네를 검색해보세요" required maxlength="15">
+                <input class="search_btn" type="submit" value="채팅하기">
             </form>
         </div>
     </div>
@@ -82,5 +82,6 @@
             </div>
         </section>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
